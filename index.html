@@ -137,13 +137,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
   <style>
     body {
-      background: radial-gradient(circle at center, #04192B 0, #000B0E 100%)
+      background-color: #000C0E;
     }
   </style>
 
   <Script>
     var index = 0;
     var compact = 0;
+    var actNdCent = 0;
   </script>
 
   <style>
@@ -240,6 +241,12 @@
     <button onclick='chart.compact(!!(compact++%2)).render().fit()'
     class="btn btn-action-button waves-effect waves-light"><i class="fas fa-sitemap"></i> compact </button>
     <br />
+
+    <button onclick='chart.setActiveNodeCentered(!!(actNdCent++%2)).render()'
+    class="btn btn-action-button waves-effect waves-light"><i class="fas fa-sitemap"></i> center Active </button>
+    <br />
+
+
 
     <button onclick='chart.setCentered("O-6162").render()' class="btn btn-action-button waves-effect waves-light"><i
                 class="fas fa-compress-arrows-alt"></i> center</button>
