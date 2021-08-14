@@ -225,14 +225,12 @@
     <br />
 
 
-    <button
-            onclick='chart.addNode({imageUrl:"https:\/\/raw.githubusercontent.com/bumbeishvili/Assets/master/Projects/D3/Organization%20Chart/cto.jpg",id:"level 5",parentId:"O-6164",_centered:true,name:"test",progress:[25,20,15,10]})'
-            class="btn btn-action-button waves-effect waves-light"><i class="fas fa-folder-plus"></i> Add 5th
-            tier</button>
-    <br>
     <button onclick='chart.removeNode("O-6067")' class="btn btn-action-button waves-effect waves-light"><i
                 class="fas fa-user-times"></i> remove</button><br>
 
+    <button onclick="chart.fit()" class="btn btn-action-button waves-effect waves-light"><i class="fas fa-sync"></i>
+                  fit</button>
+    <br>
 
     <button onclick='chart.layout(["right","bottom","left","top"][index++%4]).render().fit()'
             class="btn btn-action-button waves-effect waves-light"><i class="fas fa-retweet"></i> swap </button>
@@ -253,7 +251,7 @@
     <br>
     <button onclick='chart.setHighlighted("O-6162").render()'
             class="btn btn-action-button waves-effect waves-light"><i class="fas fa-highlighter"></i> mark</button><br>
-    <button onclick='chart.setUpToTheRootHighlighted("O-6162").render()'
+    <button onclick='chart.setUpToTheRootHighlighted("O-6162").render().fit()'
             class="btn btn-action-button waves-effect waves-light"><i class="fas fa-route"></i> mark root</button>
     <br />
     <button onclick="chart.clearHighlighting()" class="btn btn-action-button waves-effect waves-light"><i
@@ -275,7 +273,7 @@
                   class="far fa-file-pdf"></i> export pdf</button>
     <br />
 
-    <button onclick='chart.connections([{from:"O-6067",to:"O-6070",label:"Conflicts of interest"}]).render()'
+    <button onclick='chart.connections([{from:"O-6069",to:"O-6070",label:"Conflicts of interest"}]).render()'
             class="btn btn-action-button waves-effect waves-light"><i class="fas fa-project-diagram"></i> add
             link</button>
     <br />
@@ -283,9 +281,7 @@
 
 
 
-    <button onclick="chart.fit()" class="btn btn-action-button waves-effect waves-light"><i class="fas fa-sync"></i>
-            fit</button>
-    <br>
+
     <button onclick="chart.zoomOut()" class="btn btn-action-button waves-effect waves-light"><i
                 class="fas fa-minus"></i> zoom out</button><br>
     <button onclick="chart.zoomIn()" class="btn btn-action-button waves-effect waves-light"><i
