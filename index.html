@@ -6,7 +6,7 @@
 
 <body>
   <script src="https://d3js.org/d3.v7.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/d3-org-chart"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3-org-chart@2"></script>
   <script src="https://cdn.jsdelivr.net/npm/d3-flextree@2.0.0/build/d3-flextree.js"></script>
 
   <div class="chart-container" style=" height:1200px"></div>
@@ -268,6 +268,9 @@
     <br>
     <button onclick="chart.expandAll()" class="btn btn-action-button waves-effect waves-light"><i
                 class="fas fa-angle-double-down"></i> expand all</button><br>
+
+    <button onclick="chart.collapseAll()" class="btn btn-action-button waves-effect waves-light"><i
+      class="fas fa-angle-double-up"></i> collapse all</button><br>
 
     <button onclick="downloadPdf()" class="btn btn-action-button waves-effect waves-light"><i
                   class="far fa-file-pdf"></i> export pdf</button>
